@@ -1,0 +1,79 @@
+[
+  {
+    "item": {
+      "id": "cartesi",
+      "name": "Cartesi",
+      "symbol": "CTSI",
+      "market_cap_rank": 278,
+      "thumb": "https://assets.coingecko.com/coins/images/11038/thumb/cartesi.png?1592288021",
+      "large": "https://assets.coingecko.com/coins/images/11038/large/cartesi.png?1592288021",
+      "score": 0
+    }
+  },
+  {
+    "item": {
+      "id": "pancakeswap-token",
+      "name": "PancakeSwap",
+      "symbol": "CAKE",
+      "market_cap_rank": 72,
+      "thumb": "https://assets.coingecko.com/coins/images/12632/thumb/IMG_0440.PNG?1602654093",
+      "large": "https://assets.coingecko.com/coins/images/12632/large/IMG_0440.PNG?1602654093",
+      "score": 1
+    }
+  },
+  {
+    "item": {
+      "id": "decentr",
+      "name": "Decentr",
+      "symbol": "DEC",
+      "market_cap_rank": 378,
+      "thumb": "https://assets.coingecko.com/coins/images/11816/thumb/Decentr.png?1594637985",
+      "large": "https://assets.coingecko.com/coins/images/11816/large/Decentr.png?1594637985",
+      "score": 2
+    }
+  },
+  {
+    "item": {
+      "id": "matic-network",
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "market_cap_rank": 81,
+      "thumb": "https://assets.coingecko.com/coins/images/4713/thumb/matic___polygon.jpg?1612939050",
+      "large": "https://assets.coingecko.com/coins/images/4713/large/matic___polygon.jpg?1612939050",
+      "score": 3
+    }
+  },
+  {
+    "item": {
+      "id": "cardano",
+      "name": "Cardano",
+      "symbol": "ADA",
+      "market_cap_rank": 4,
+      "thumb": "https://assets.coingecko.com/coins/images/975/thumb/cardano.png?1547034860",
+      "large": "https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860",
+      "score": 4
+    }
+  },
+  {
+    "item": {
+      "id": "swipe",
+      "name": "Swipe",
+      "symbol": "SXP",
+      "market_cap_rank": 124,
+      "thumb": "https://assets.coingecko.com/coins/images/9368/thumb/swipe.png?1566792311",
+      "large": "https://assets.coingecko.com/coins/images/9368/large/swipe.png?1566792311",
+      "score": 5
+    }
+  },
+  {
+    "item": {
+      "id": "unistake",
+      "name": "Unistake",
+      "symbol": "UNISTAKE",
+      "market_cap_rank": 377,
+      "thumb": "https://assets.coingecko.com/coins/images/12813/thumb/unistake.png?1612346684",
+      "large": "https://assets.coingecko.com/coins/images/12813/large/unistake.png?1612346684",
+      "score": 6
+    }
+  }
+]
