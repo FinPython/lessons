@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 def get_value(url,html_class,multiplier=1000000000):
     p = requests.get(url)
     soup = BeautifulSoup(p.content,'html.parser')
-    r = soup.find_all('span', attrs={"class":html_class})
+    r = soup.find_all('span', attrs={'class':html_class})
     return float(r[0].text.replace(',','')) * multiplier
 
 # https://www.frbatlanta.org/cqer/research/gdpnow/archives.aspx
