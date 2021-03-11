@@ -2,8 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-
-def get_value(url,html_class,multiplier=1000000000):
+def scrape_value(url,
+        html_class,
+        multiplier=1000000000):
     p = requests.get(url)
     soup = BeautifulSoup(p.content,'html.parser')
     r = soup.find_all('span', attrs={'class':html_class})
@@ -12,15 +13,17 @@ def get_value(url,html_class,multiplier=1000000000):
 # https://www.frbatlanta.org/cqer/research/gdpnow/archives.aspx
 gdp_current_adjustment = 1.084 # Atlanta FRB
 
-gdp = get_value('https://fred.stlouisfed.org/series/GDP',
-                'series-meta-observation-value')
+gdp = scrape_value(
+    'https://fred.stlouisfed.org/series/GDP',
+    'series-meta-observation-value')
 gdp = gdp * gdp_current_adjustment
 
-w5000 = get_value('https://markets.ft.com/data/indices/tearsheet/summary?s=W5000FLT:PSE',                         'mod-ui-data-list__value')
+tmv = scrape_value(
+    'https://markets.ft.com/data/indices/tearsheet/summary?s=W5000FLT:PSE',       'mod-ui-data-list__value')
 
-buffet_indicator = w5000 / gdp
+buffet_indicator = tmv / gdp * 100
 print('GDP:',gdp)
-print('W5000:',w5000)
+print('W5000:',tmv)
 print('BI:',buffet_indicator)
 
 
