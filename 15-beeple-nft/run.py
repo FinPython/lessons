@@ -3,8 +3,8 @@
 import requests,json,wget,os
 from web3 import Web3
 
-infura_api_key = os.getenv('INFURA_API_KEY') #'940b268eaee746c7a4f9402b6bb7a7bc'
-etherscan_api_key = os.getenv('ETHERSCAN_API_KEY') #'S3AXP8WGI4NI4U4HDGI29BVFP9E8QNI6QC'
+infura_api_key = os.getenv('INFURA_API_KEY')
+etherscan_api_key = os.getenv('ETHERSCAN_API_KEY') 
 
 w3 = Web3(Web3.HTTPProvider(f'https://mainnet.infura.io/v3/{infura_api_key}'))
 
