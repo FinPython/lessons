@@ -8,15 +8,15 @@ etherscan_api_key = os.getenv('ETHERSCAN_API_KEY')
 
 w3 = Web3(Web3.HTTPProvider(f'https://mainnet.infura.io/v3/{infura_api_key}'))
 
-sca = '0x2A46f2fFD99e19a89476E2f62270e0a35bBf0756'
+sca = '0x2A46f2fFD99e19a89476E2f62270e0a35bBf0756' # As per Christie's website
 abi = requests.get(f'https://api.etherscan.io/api?module=contract&action=getabi&address={sca}&apikey={etherscan_api_key}').json()
 abi = json.loads(abi['result'])
 
 beeple_token_id = 40913 # As per Christie's website
 contract = w3.eth.contract(address=sca,abi=abi)
 ipfs_url = contract.functions.tokenURI(beeple_token_id).call()
-ipfs_id = ipfs_url.split('/')[3]
-ipfs_meta_url = f'https://ipfsgateway.makersplace.com/ipfs/{ipfs_id}'
+ipfs_id = ipfs_url.split('/')[3] # Get just the URI
+ipfs_meta_url = f'https://ipfsgateway.makersplace.com/ipfs/{ipfs_id}' # Returns JSON metadata containg image URL
 ipfs_image_url = requests.get(ipfs_meta_url).json()['imageUrl']
 
 wget.download(ipfs_image_url,out='beeple.jpg')
