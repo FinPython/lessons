@@ -14,7 +14,7 @@ abi = json.loads(abi['result'])
 
 beeple_token_id = 40913 # As per Christie's website
 contract = w3.eth.contract(address=sca,abi=abi)
-ipfs_url = contract.functions.tokenURI().call()
+ipfs_url = contract.functions.tokenURI(beeple_token_id).call()
 ipfs_id = ipfs_url.split('/')[3]
 ipfs_meta_url = f'https://ipfsgateway.makersplace.com/ipfs/{ipfs_id}'
 ipfs_image_url = requests.get(ipfs_meta_url).json()['imageUrl']
